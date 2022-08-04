@@ -3,8 +3,6 @@
 settings.gradle,0\5\05efc8b1657769a27696d478ded1e95f38737233
 o
 ?app/src/main/java/com/kotlin/sphtech/network/RetroRepository.kt,3\2\323bfed436889ec8cf9475ccf448dbe6905ff25c
-<
-build.gradle,f\0\f07866736216be0ee2aba49e392191aeae700a35
 w
 Gapp/src/main/java/com/kotlin/sphtech/viewmodel/MainActivityViewModel.kt,e\b\eb4b7cf218fd9a456f1d3e2288315a4cd62f101d
 a
@@ -19,11 +17,11 @@ d
 4app/src/main/java/com/kotlin/sphtech/model/Record.kt,8\4\84ab0d9904a9add7a5cbe0e6da846eb51744e6d8
 h
 8app/src/main/java/com/kotlin/sphtech/model/MobileData.kt,8\9\892068a31785ae3f612cda26a577c891153d10f0
-i
-9app/src/main/java/com/kotlin/sphtech/model/AnnualUsage.kt,7\b\7b1b0cb2872115edc7c52e9a56e7f145559b7886
 l
 <app/src/main/java/com/kotlin/sphtech/MobileNetworkDataApp.kt,d\6\d67a7636ae51591630ac962a12a565450e82f86e
-P
- app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
+<
+build.gradle,f\0\f07866736216be0ee2aba49e392191aeae700a35
+f
+6app/src/main/java/com/kotlin/sphtech/db/AppDatabase.kt,0\f\0f30731602b34f2c7bfe02a9d7f13d1fb85ee3fd
 i
-9app/src/main/java/com/kotlin/sphtech/model/QuarterData.kt,e\2\e2e2d3de1d83cd8db584b7a6aee50c7b2ea2b4e6
+9app/src/main/java/com/kotlin/sphtech/model/AnnualUsage.kt,7\b\7b1b0cb2872115edc7c52e9a56e7f145559b7886
