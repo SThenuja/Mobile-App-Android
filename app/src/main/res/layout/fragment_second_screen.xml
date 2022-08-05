@@ -1,27 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:gravity="center"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".activity.SecondScreenFragment">
 
-   <!-- <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fitsSystemWindows="true"
-        app:liftOnScroll="true"
-        app:liftOnScrollTargetViewId="@id/detail_view_scroll_view">
-
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/detail_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        app:layout_collapseMode="pin"
-        app:navigationIcon="@drawable/ic_up_button"
-        app:titleTextAppearance="@style/TextAppearance.Toolbar.DetailTitle" />
-    </com.google.android.material.appbar.AppBarLayout>-->
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -91,4 +74,4 @@
 
     </androidx.cardview.widget.CardView>
 
-</RelativeLayout>
+</FrameLayout>

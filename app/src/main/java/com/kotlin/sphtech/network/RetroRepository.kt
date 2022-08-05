@@ -1,7 +1,5 @@
 package com.kotlin.sphtech.network
 
-import android.os.Handler
-import android.os.HandlerThread
 import android.util.Log
 import androidx.lifecycle.LiveData
 import com.kotlin.sphtech.db.AppDao
@@ -15,8 +13,6 @@ import javax.inject.Inject
 class RetroRepository @Inject constructor(private val serviceInterface: ServiceInterface,
                                             private val appDao: AppDao) {
     private val TAG :String = "RetroRepository"
-    private lateinit var handlerThread: HandlerThread
-    private lateinit var handler: Handler
 
     fun getAllRecords(): LiveData<List<Record>> {
         return appDao.getAllRecords()
@@ -29,16 +25,6 @@ class RetroRepository @Inject constructor(private val serviceInterface: ServiceI
     fun makeAPICall(query: String?){
         val call: Call<MobileData> = serviceInterface.getDataFromAPI(query!!)
         Log.e(TAG, "Request: ${call.request()}")
-        /*var recordList: List<Record>? = ArrayList()
-
-        handlerThread = HandlerThread("Repository")
-        handlerThread.start()
-        handler = Handler(handlerThread.looper)
-
-        handler.post {
-
-
-        }*/
 
         call.enqueue(object : Callback<MobileData>{
             override fun onResponse(call: Call<MobileData>, response: Response<MobileData>) {

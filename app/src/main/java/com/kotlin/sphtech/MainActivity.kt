@@ -1,7 +1,10 @@
 package com.kotlin.sphtech
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.res.Configuration
 import android.os.Bundle
+import android.util.Log
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DividerItemDecoration
@@ -45,6 +48,15 @@ class MainActivity : AppCompatActivity() {
 
         viewModel.makeApiCall()
 
+    }
+
+    override fun onConfigurationChanged(newConfig: Configuration) {
+        super.onConfigurationChanged(newConfig)
+        val orientation = newConfig.orientation
+        if(orientation == Configuration.ORIENTATION_LANDSCAPE)
+            Toast.makeText(this,getString(R.string.landscape_message),Toast.LENGTH_SHORT).show()
+        else if(orientation == Configuration.ORIENTATION_PORTRAIT)
+            Toast.makeText(this,getString(R.string.portrait_message),Toast.LENGTH_SHORT).show()
     }
 
 }

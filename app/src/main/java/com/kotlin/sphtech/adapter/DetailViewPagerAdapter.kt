@@ -4,10 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import androidx.viewpager2.widget.ViewPager2
 import com.kotlin.sphtech.R
-import com.kotlin.sphtech.activity.DetailActivity
-import com.kotlin.sphtech.databinding.DataItemBinding
 import com.kotlin.sphtech.databinding.UsageDetailsBinding
 import com.kotlin.sphtech.model.Summary
 
@@ -24,27 +21,6 @@ class DetailViewPagerAdapter(private val list: MutableList<Summary>
     override fun onBindViewHolder(holder: DetailViewPagerAdapter.DetailViewHolder, position: Int) {
         val model = list[position]
         holder.bind(model)
-
-        /*viewPager2.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
-            override fun onPageScrollStateChanged(state: Int) {
-                super.onPageScrollStateChanged(state)
-
-                when (state) {
-                    ViewPager2.SCROLL_STATE_DRAGGING -> {
-                        holder.toolbar.navigationIcon = null
-                        holder.fab.visibility = View.INVISIBLE
-                    }
-                    ViewPager2.SCROLL_STATE_IDLE -> {
-                        holder.toolbar.setNavigationIcon(R.drawable.ic_up_button)
-                        holder.fab.visibility = View.VISIBLE
-                    }
-                    ViewPager2.SCROLL_STATE_SETTLING -> {
-                        holder.toolbar.navigationIcon = null
-                        holder.fab.visibility = View.INVISIBLE
-                    }
-                }
-            }
-        })*/
     }
 
     override fun getItemCount(): Int {

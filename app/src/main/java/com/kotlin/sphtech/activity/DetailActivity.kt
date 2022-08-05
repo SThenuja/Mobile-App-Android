@@ -1,8 +1,11 @@
 package com.kotlin.sphtech.activity
 
+import android.content.res.Configuration
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
+import com.kotlin.sphtech.R
 import com.kotlin.sphtech.adapter.DetailViewPagerAdapter
 import com.kotlin.sphtech.databinding.ActivityDetailBinding
 import com.kotlin.sphtech.model.Summary
@@ -23,6 +26,16 @@ class DetailActivity : AppCompatActivity() {
         myAdapter = DetailViewPagerAdapter(data)
         viewPager2.adapter = myAdapter
         viewPager2.setCurrentItem(summary!!._id,false)
+
+    }
+
+    override fun onConfigurationChanged(newConfig: Configuration) {
+        super.onConfigurationChanged(newConfig)
+        val orientation = newConfig.orientation
+        if(orientation == Configuration.ORIENTATION_LANDSCAPE)
+            Toast.makeText(this,getString(R.string.landscape_message), Toast.LENGTH_SHORT).show()
+        else if(orientation == Configuration.ORIENTATION_PORTRAIT)
+            Toast.makeText(this,getString(R.string.portrait_message), Toast.LENGTH_SHORT).show()
     }
 
     companion object{

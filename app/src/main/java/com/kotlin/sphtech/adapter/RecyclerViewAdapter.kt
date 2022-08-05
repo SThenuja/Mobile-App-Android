@@ -12,8 +12,8 @@ import com.kotlin.sphtech.databinding.DataItemBinding
 import com.kotlin.sphtech.model.QuarterData
 import com.kotlin.sphtech.model.Record
 import com.kotlin.sphtech.model.Summary
-import javax.annotation.Nullable
 
+@Suppress("NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
 class RecyclerViewAdapter(private val context: Context):RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>(){
     private var recordList: MutableList<Summary?>?= mutableListOf()
     private val map = HashMap<Int, Double> ()
@@ -64,19 +64,22 @@ class RecyclerViewAdapter(private val context: Context):RecyclerView.Adapter<Rec
                 total += v.volume.toDouble()
                 volumeList.add(v.volume)
             }
+
             summary.add(Summary(count,key,quarterList,volumeList,total))
             count += 1
+
+
         }
 
         return summary
     }
 
-    @Nullable
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
     ): ViewHolder {
        val view = LayoutInflater.from(parent.context).inflate(R.layout.data_item, parent,false)
+
         return ViewHolder(view).listen { pos ->
             val item = recordList!![pos]
             val intent = Intent(context, DetailActivity::class.java)
